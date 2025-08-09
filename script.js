@@ -1,5 +1,5 @@
 // Countdown
-const countdown = () => {
+function updateCountdown() {
   const weddingDate = new Date("2025-12-25T11:00:00").getTime();
   const now = new Date().getTime();
   const distance = weddingDate - now;
@@ -16,9 +16,9 @@ const countdown = () => {
 
   document.getElementById("timer").innerHTML =
     `${days}d ${hours}h ${minutes}m ${seconds}s`;
-};
-
-setInterval(countdown, 1000);
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
 
 // Fade-in on scroll
 const faders = document.querySelectorAll('.fade-in');
